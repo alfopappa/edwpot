@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>  
+  <head>  
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">  
+    $(document).ready(function() {  
+      $("form#esercizio").submit(function(){  
+        var word = $("#word").val();  
+        $.ajax({  
+          type: "POST",
+          url: "/edwpot/s08/checker",  
+          data: "word=" + word,
+          dataType: "html",
+          success: function(risposta) {  
+            $("div#risposta").html(risposta);  
+          },
+        }); 
+        return false;  
+      });
+    });
+    </script>  
+  </head>  
+  <body>  
+
+    <form id="esercizio">
+    <p>
+      Put your word here:<br/>
+      <input type="text" name="user" id="word"/>
+    </p>
+    
+    <p>
+      <input type="submit" value="GO">
+    </p>
+    </form>
+
+    <div id="risposta"></div>  
+
+  </body> 
+</html> 

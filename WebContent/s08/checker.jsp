@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Hello!</h1>
+    <p id = "word">
     <p>
         The user name
         <%
@@ -24,6 +25,6 @@
                 }
             }
         %>
-    </p>
+    </p> 
 </body>
 </html>
