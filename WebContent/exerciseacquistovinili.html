@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vinyls Shop AH</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+<h1> Vinyls Market Afterhours</h1>
+<form action="/WebContent">
+        <div>
+        <ul>
+            <input type="radio" id="Pad" name="Pmusic" value="Padania" />
+            <label for="Pad">Padania</label> 
+            <input type="text" name="Pmusic" placeholder="Put your quantity here" /> <br>
+            
+            <input type="radio" id="Folf" name="Fmusic" value="Folfiri o folfox" />
+            <label for="Folf">Folfiri o Folfox</label>
+            <input type="text" name="Fmusic" placeholder="Put your quantity here" /> <br>
+            
+            <input type="radio" id="Ger" name="Gmusic" value="Germi" />
+            <label for="Ger">Germi</label> 
+            <input type="text" name="Gmusic" placeholder="Put your quantity here" /> <br>
+            
+            <input type="radio" id="Pop" name="Pomusic" value="Pop Kills Your Soul"  />
+            <label for="Pop">Pop Kills Your Soul</label>
+            <input type="text" name="Pomusic" placeholder="Put your quantity here" /> <br>
+            
+            <input type="radio" id="Bal" name="Bmusic" value="Ballate per piccole iene" />
+            <label for="Bal">Ballate per piccole iene</label>
+            <input type="text" name="Bmusic" placeholder="Put your quantity here" /> <br>
+        </ul>
+           
+        </div>
+        
+        <div id = "Add">
+            <input type="submit" value="Add to Basket" />
+        </div>      
+</form>
+
+ <script type="text/javascript">  
+    $(function() {  
+      $('#add').click(function(){   
+          $('#').load('/edwpot/WebContent/exerciseacquistovinili.html' + $'#Bal, #Pop, #Ger, #Folf, #Pad').val());
+      });
+    });
+    </script> 
+        

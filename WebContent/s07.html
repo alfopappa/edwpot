@@ -8,12 +8,14 @@
     <script src=".\js\jquery-3.4.1.min.js"></script>
  -->
 <script type="text/javascript">
-    $(function() {
+    $(function() {                                                        //$ = selector
         $('#btnPlain').click(function() {
-            $.ajax({
-                url : "s07.txt",
-                success : function(data) {
-                    $('#targetPlain').text(data);
+            $.ajax({                                                     //ajax è la funzione che ha come parametro un oggetto. 
+                url : "s07.txt",                                         //url è l'indirizzo della risorsa che noi vogliamo.
+                success : function(data) {                               //success se dovrai avere successo allora mi pubblicherai questo testo sulla pagina web.
+                    $('#targetPlain').text(data);                        //function(data = nome della variabile che stiamo utilizzando in questo momento) viene chiamata dal browser
+                    	
+                                                                         //               
                 }
             })
         })

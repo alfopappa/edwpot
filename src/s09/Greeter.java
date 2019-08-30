@@ -24,13 +24,13 @@ public class Greeter extends HttpServlet {
 
         Duration duration;
         if (start == null) {
-            duration = Duration.ZERO;
-            session.setAttribute("start", LocalTime.now());
+            duration = Duration.ZERO;  //ZERO = costante: inizializzo durata zero.
+            session.setAttribute("start", LocalTime.now());  //attributo start, valore oggetto LocalTime.now
         } else {
             duration = Duration.between(start, LocalTime.now());
         }
 
-        if (request.getParameter("done") != null) {
+        if (request.getParameter("done") != null) { //se l'utente mi ha passato done, cioè che esiste, entro nella riga 34
             session.invalidate();
 
             response.setContentType("text/html");

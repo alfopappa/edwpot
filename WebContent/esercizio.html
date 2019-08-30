@@ -3,37 +3,29 @@
   <head>  
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">  
-    $(document).ready(function() {  
-      $("form#esercizio").submit(function(){  
-        var word = $("#word").val();  
-        $.ajax({  
-          type: "POST",
-          url: "/edwpot/s08/checker",  
-          data: "word=" + word,
-          dataType: "html",
-          success: function(risposta) {  
-            $("div#risposta").html(risposta);  
-          },
-        }); 
-        return false;  
+    $(function() {  
+      $('#go').click(function(){   
+          $('#result').load('/edwpot/s08/checker?user=' + $'#word').val());
       });
     });
     </script>  
   </head>  
   <body>  
 
-    <form id="esercizio">
-    <p>
-      Put your word here:<br/>
+   
+      Put your word here:
+      <br/>
       <input type="text" name="user" id="word"/>
-    </p>
     
-    <p>
-      <input type="submit" value="GO">
-    </p>
-    </form>
-
-    <div id="risposta"></div>  
+    
+    <br/>
+    <input type="submit" value="GO" id="go">
+    
+    
+    
+     <div id="result">                           
+    </div>
 
   </body> 
 </html> 
+
