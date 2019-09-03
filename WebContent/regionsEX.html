@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Continenti</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<style>
+h1 {
+   font-size: x-large;
+   font-family: Cooper Black;
+}
+body {
+	background-color: yellow;
+	font-family: Calibri, Myriad;
+}
+select {
+  font-family: Chiller;
+  font-size: x-large;
+}
+option {
+  font-family: Chiller;
+  background-color: black;
+  color: yellow;
+}
+</style>
+<body>
+	<h1>Put your region</h1>
+	<form action="/edwpot/s21/regionsEX">
+		<select name="Regions">
+			<option value="1">Europe</option>
+			<option value="2">Americas</option>
+			<option value="3">Asia</option>
+			<option value="4">Middle East and Africa</option>
+			<option value="5">Antarctica</option>
+		</select>
+		<div id="OK">
+			<input type="submit" value="OK" />
+		</div>
+	</form>
